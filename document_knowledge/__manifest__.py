@@ -32,7 +32,7 @@ Provides a Documents menu and basic configuration to enable central attachment m
         "views/document_knowledge.xml",
         "views/res_config.xml",
     ],
-    "demo": ["demo/document_knowledge.xml"],
+    "demo": [],
     "installable": True,
     "application": True,
 }
