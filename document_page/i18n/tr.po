@@ -293,7 +293,6 @@ msgstr "İşaretlenirse, yeni mesajlarla ilgilenmeniz gerekir."
 
 #. module: document_page
 #: model:ir.model.fields,help:document_page.field_document_page__message_has_error
-#: model:ir.model.fields,help:document_page.field_document_page__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "İşaretlenirse, bazı iletilerde teslim hatası olur."
 
@@ -469,6 +468,11 @@ msgid "Parent Menu"
 msgstr "Sayfa Menu"
 
 #. module: document_page
+#: model:ir.model.fields,field_description:document_page.field_document_page__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__activity_user_id
 msgid "Responsible User"
 msgstr "Sorumlu Kullanıcı"
@@ -483,11 +487,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:document_page.view_wiki_form
 msgid "Revision"
 msgstr "Revizyon"
-
-#. module: document_page
-#: model:ir.model.fields,field_description:document_page.field_document_page__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "SMS Mesaj Teslim hatası"
 
 #. module: document_page
 #. odoo-python
@@ -531,12 +530,6 @@ msgstr ""
 "şablon."
 
 #. module: document_page
-#. odoo-python
-#: code:addons/document_page/models/document_page_history.py:0
-msgid "There are no changes in revisions."
-msgstr "Revizyonlarda herhangi bir değişiklik yoktur."
-
-#. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__name
 #: model_terms:ir.ui.view,arch_db:document_page.view_wiki_filter
 msgid "Title"
@@ -561,6 +554,16 @@ msgstr "Bir istisna etkinliğini gösteren simge."
 #: model:ir.model.fields,help:document_page.field_document_page__backend_url
 msgid "Use it to link resources univocally"
 msgstr "Kaynakları tek anlamlı olarak bağlamak için kullanın"
+
+#. module: document_page
+#: model:ir.model.fields,field_description:document_page.field_document_page__website_message_ids
+msgid "Website Messages"
+msgstr "Web Sitesi Mesajları"
+
+#. module: document_page
+#: model:ir.model.fields,help:document_page.field_document_page__website_message_ids
+msgid "Website communication history"
+msgstr "Web sitesi iletişim geçmişi"
 
 #. module: document_page
 #: model:ir.model,name:document_page.model_document_page_create_menu
@@ -597,6 +600,12 @@ msgstr "ya da"
 msgid "summary"
 msgstr ""
 
+#~ msgid "There are no changes in revisions."
+#~ msgstr "Revizyonlarda herhangi bir değişiklik yoktur."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "SMS Mesaj Teslim hatası"
+
 #~ msgid "Last Modified on"
 #~ msgstr "Son değişiklik"
 
@@ -620,9 +629,3 @@ msgstr ""
 
 #~ msgid "Followers (Channels)"
 #~ msgstr "Takipçiler (kanal)"
-
-#~ msgid "Website Messages"
-#~ msgstr "Web Sitesi Mesajları"
-
-#~ msgid "Website communication history"
-#~ msgstr "Web sitesi iletişim geçmişi"
