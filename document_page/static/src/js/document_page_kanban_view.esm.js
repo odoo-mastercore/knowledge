@@ -8,3 +8,4 @@ export const documentPageKanbanView = {
 };
 
 registry.category("views").add("document_page_kanban_view", documentPageKanbanView);
+

@@ -17,3 +17,4 @@ export class DocumentPageKanbanController extends KanbanController {
         }
     }
 }
+
