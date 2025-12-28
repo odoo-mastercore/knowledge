@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
+#
+###############################################################################
+-->
+<odoo>
+    <record id="group_document_page_approver" model="res.groups">
+        <field name="name">Document Page Approver</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>
