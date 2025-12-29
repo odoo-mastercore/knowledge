@@ -50,6 +50,26 @@ class DocumentPage(models.Model):
     # Misc
     backend_url = fields.Char(compute="_compute_backend_url", string="Backend URL")
 
+    content_uid = fields.Many2one(
+        "res.users",
+        "Last Contributor",
+        related="history_head.create_uid",
+        store=True,
+        index=True,
+        readonly=True,
+    )
+    company_id = fields.Many2one(
+        "res.company",
+        "Company",
+        help="If set, page is accessible only from this company",
+        index=True,
+        ondelete="cascade",
+        default=lambda self: self.env.company,
+    )
+    
+    image = fields.Binary(attachment=True)
+    color = fields.Integer(string="Color Index")
+
     def _compute_backend_url(self):
         tmpl = "/web#id={}&model=document.page&view_type=form"
         for rec in self:
