@@ -50,8 +50,36 @@ class DocumentPage(models.Model):
     create_uid = fields.Many2one("res.users", readonly=True)
     write_uid = fields.Many2one("res.users", readonly=True)
 
+    draft_name = fields.Char(
+        string="Name",
+        help="Name for the changes made",
+        related="history_head.name",
+        readonly=False,
+    )
+
+    draft_summary = fields.Char(
+        string="Summary",
+        help="Describe the changes made",
+        related="history_head.summary",
+        readonly=False,
+    )
+
+
+    type = fields.Selection(
+        [("content", "Content"), ("category", "Category")],
+        help="Page type",
+        default="content",
+    )
+
+    template = fields.Html(
+        help="Template that will be used as a content template "
+        "for all new page of this category.",
+    )
+
     # Hierarchy
-    parent_id = fields.Many2one("document.page", string="Category")
+    parent_id = fields.Many2one(
+        "document.page", "Category", domain=[("type", "=", "category")]
+    )
     child_ids = fields.One2many("document.page", "parent_id", string="Children")
     menu_id = fields.Many2one("ir.ui.menu", string="Menu")
     sequence = fields.Integer(default=10)
@@ -76,8 +104,18 @@ class DocumentPage(models.Model):
         default=lambda self: self.env.company,
     )
     
+    active = fields.Boolean(default=True)
+    
     image = fields.Binary(attachment=True)
     color = fields.Integer(string="Color Index")
+
+    content_date = fields.Datetime(
+        "Last Contribution Date",
+        related="history_head.create_date",
+        store=True,
+        index=True,
+        readonly=True,
+    )
 
     def _compute_backend_url(self):
         tmpl = "/web#id={}&model=document.page&view_type=form"
