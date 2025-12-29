@@ -241,49 +241,6 @@
                </list>
           </field>
      </record>
-     <!-- History Search view  -->
-     <record id="view_wiki_history_filter" model="ir.ui.view">
-          <field name="name">document.page.history.search</field>
-          <field name="model">document.page.history</field>
-          <field name="inherit_id" ref="document_page.view_wiki_history_filter" />
-          <field name="arch" type="xml">
-               <field name="page_id" position="before">
-                    <field name="state" />
-               </field>
-               <field name="create_uid" position="after">
-                    <filter name="draft" string="Draft" domain="[('state','=','draft')]" />
-                    <filter
-                         name="pending"
-                         string="Pending Approval"
-                         domain="[('state','=','to approve')]"
-                    />
-                    <filter
-                         name="approved"
-                         string="Approved"
-                         domain="[('state','=','approved')]"
-                    />
-                    <filter
-                         name="cancelled"
-                         string="Cancelled"
-                         domain="[('state','=','cancelled')]"
-                    />
-               </field>
-               <filter name="group_by_author" position="before">
-                    <filter
-                         name="group_state"
-                         string="State"
-                         context="{'group_by':'state'}"
-                    />
-               </filter>
-               <filter name="group_by_author" position="after">
-                    <filter
-                         name="group_approver"
-                         string="Approver"
-                         context="{'group_by':'approved_uid'}"
-                    />
-               </filter>
-          </field>
-     </record>
      <!-- Change Requests Action  -->
      <record model="ir.actions.act_window" id="action_change_requests">
           <field name="name">Change Requests</field>
