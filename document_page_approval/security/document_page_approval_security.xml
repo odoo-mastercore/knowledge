@@ -10,6 +10,5 @@
 <odoo>
     <record id="group_document_page_approver" model="res.groups">
         <field name="name">Document Page Approver</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
     </record>
 </odoo>
