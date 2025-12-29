@@ -24,6 +24,9 @@ class DocumentPage(models.Model):
         tracking=True,
     )
 
+    is_approval_required = fields.Boolean(string="Approval required", default=False
+    )
+
     def action_request_approval(self):
         for page in self:
             page.approval_state = "waiting"
