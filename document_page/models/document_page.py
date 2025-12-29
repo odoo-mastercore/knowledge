@@ -33,9 +33,18 @@ class DocumentPage(models.Model):
     draft = fields.Boolean(default=True)
     history_id = fields.Many2one("document.page.history", readonly=True)
     history_ids = fields.One2many(
-        "document.page.history", "page_id", string="History", readonly=True
+        "document.page.history",
+        "page_id",
+        string="History",
+        readonly=True,
     )
-    history_head = fields.Html(compute="_compute_history_head")
+    history_head = fields.Many2one(
+        "document.page.history",
+        "HEAD",
+        compute="_compute_history_head",
+        store=True,
+        auto_join=True,
+    )
     create_date = fields.Datetime(readonly=True)
     write_date = fields.Datetime(readonly=True)
     create_uid = fields.Many2one("res.users", readonly=True)
@@ -128,10 +137,11 @@ class DocumentPage(models.Model):
     def _search_content(self, operator, value):
         return [("content_unsafe", operator, value)]
 
+    @api.depends("history_ids")
     def _compute_history_head(self):
         for rec in self:
             if rec.history_ids:
-                rec.history_head = rec.history_ids[0].content
+                rec.history_head = rec.history_ids[0]
             else:
                 rec.history_head = False
 
