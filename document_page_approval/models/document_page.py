@@ -5,10 +5,11 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 #
 ###############################################################################
+# Copyright (C) 2013 Savoir-faire Linux (<http://www.savoirfairelinux.com>).
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
 from odoo.exceptions import UserError
-
 
 class DocumentPage(models.Model):
     _inherit = "document.page"
