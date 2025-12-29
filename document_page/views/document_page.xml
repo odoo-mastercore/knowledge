@@ -164,12 +164,6 @@
                     <field name="parent_id"/>
                     <field name="create_uid"/>
                     <field name="content_uid"/>
-
-                    <group string="Agrupar por">
-                         <filter name="group_by_category" string="Categoría" context="{'group_by':'parent_id'}"/>
-                         <filter name="group_by_author" string="Autor" context="{'group_by':'create_uid'}"/>
-                         <filter name="group_by_last_contributor" string="Último contribuidor" context="{'group_by':'content_uid'}"/>
-                    </group>
                </search>
           </field>
      </record>
