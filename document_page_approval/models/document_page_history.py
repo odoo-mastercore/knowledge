@@ -8,7 +8,6 @@
 # Copyright (C) 2013 Savoir-faire Linux (<http://www.savoirfairelinux.com>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-
 from odoo import fields, models
 from odoo.exceptions import UserError
 from odoo.tools.translate import _
