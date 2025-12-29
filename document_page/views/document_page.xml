@@ -144,29 +144,6 @@
                </form>
           </field>
      </record>
-     <!-- page Search view -->
-     <record id="view_wiki_filter" model="ir.ui.view">
-          <field name="name">document.page.search</field>
-          <field name="model">document.page</field>
-          <field name="arch" type="xml">
-               <search string="Document Page">
-                    <field
-                         name="draft_summary"
-                         string="Resumen"
-                         filter_domain="[('draft_summary','ilike',self)]"
-                    />
-                    <field
-                         name="name"
-                         string="Título / Contenido"
-                         filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]"
-                    />
-
-                    <field name="parent_id"/>
-                    <field name="create_uid"/>
-                    <field name="content_uid"/>
-               </search>
-          </field>
-     </record>
      <!-- page action -->
      <record id="action_page" model="ir.actions.act_window">
           <field name="name">Pages</field>
