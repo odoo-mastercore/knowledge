@@ -23,7 +23,7 @@
                     </group>
                     <footer>
                          <button
-                         name="document_page_menu_create"
+                         name="create_menu"
                          string="Create Menu"
                          type="object"
                          class="oe_highlight"
