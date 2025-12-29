@@ -202,29 +202,7 @@
                </list>
           </field>
      </record>
-     <record id="view_document_category_filter" model="ir.ui.view">
-          <field name="name">document.page.category.search</field>
-          <field name="model">document.page</field>
-          <field name="arch" type="xml">
-               <search string="Document Category">
-                    <field
-                         name="name"
-                         string="Contenido"
-                         filter_domain="['|', ('name','ilike',self), ('template','ilike',self)]"
-                    />
-                    <field name="parent_id"/>
-                    <field name="create_uid"/>
-                    <field name="content_uid"/>
-                    <field name="company_id" groups="base.group_multi_company"/>
 
-                    <group string="Agrupar por">
-                         <filter name="group_by_category" string="Categoría" context="{'group_by':'parent_id'}"/>
-                         <filter name="group_by_author" string="Autor" context="{'group_by':'create_uid'}"/>
-                         <filter name="group_by_last_contributor" string="Último contribuidor" context="{'group_by':'content_uid'}"/>
-                    </group>
-               </search>
-          </field>
-     </record>
      <!-- Category Action -->
      <record id="action_category" model="ir.actions.act_window">
           <field name="name">Category</field>
