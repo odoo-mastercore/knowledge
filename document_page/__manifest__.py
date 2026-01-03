@@ -1,22 +1,22 @@
-# Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# -*- coding: utf-8 -*-
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0) 
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+###############################################################################
 
 
 {
     "name": "Document Page",
-    "version": "18.0.2.1.0",
+    "version": "19.0.1.0.0",
     "category": "Knowledge Management",
-    "author": "OpenERP SA, Odoo Community Association (OCA)",
-    "images": [
-        "images/category_list.png",
-        "images/create_category.png",
-        "images/page_list.png",
-        "images/create_page.png",
-        "images/customer_invoice.jpeg",
-        "images/page_history.png",
-    ],
-    "website": "https://github.com/OCA/knowledge",
-    "license": "AGPL-3",
+    "summary": "Manage internal wiki-style document pages.",
+    "description": "Knowledge base pages with history tracking and menu integration.",
+    "author": "Mastercore Sinapsys Global®",
+    "website": "https://www.mastercore.co",
+    "license": "OPL-1",
     "depends": ["mail", "document_knowledge", "web_editor"],
     "data": [
         "security/document_page_security.xml",

@@ -1,4 +1,13 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0)
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+##############################################################################
+-->
 <odoo>
     <!-- History List view -->
     <record model="ir.ui.view" id="view_wiki_history_tree">
