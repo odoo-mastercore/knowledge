@@ -145,54 +145,6 @@
             </form>
         </field>
     </record>
-    <!-- page Search view  -->
-    <record id="view_wiki_filter" model="ir.ui.view">
-          <field name="name">document.page.search</field>
-          <field name="model">document.page</field>
-          <field name="arch" type="xml">
-               <search string="Document Page">
-                    <field
-                         name="draft_summary"
-                         string="Summary"
-                         filter_domain="[('draft_summary','ilike',self)]"
-                    />
-                    <field
-                         name="name"
-                         string="Content"
-                         filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]"
-                    />
-                    <field name="parent_id" />
-                    <field name="create_uid" />
-                    <field name="content_uid" />
-                    <field name="name" string="Title" />
-                    <group expand="0" string="Group By...">
-                         <filter
-                         name="group_by_category"
-                         string="Category"
-                         context="{'group_by':'parent_id'}"
-                         />
-                         <filter
-                         name="group_by_author"
-                         string="Author"
-                         context="{'group_by':'create_uid'}"
-                         />
-                         <filter
-                         name="group_by_last_contributor"
-                         string="Last Contributor"
-                         context="{'group_by':'content_uid'}"
-                         />
-                    </group>
-                    <searchpanel>
-                         <field
-                         name="parent_id"
-                         icon="fa-folder"
-                         string="Categories"
-                         enable_counters="1"
-                         />
-                    </searchpanel>
-               </search>
-          </field>
-     </record>
     <!-- page action -->
     <record id="action_page" model="ir.actions.act_window">
         <field name="name">Pages</field>
@@ -202,7 +154,6 @@
         <field name="context">{'default_type': 'content'}</field>
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="view_wiki_tree" />
-        <field name="search_view_id" ref="view_wiki_filter" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Click to create a new web page.
