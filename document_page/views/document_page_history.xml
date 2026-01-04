@@ -1,4 +1,13 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0)
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+##############################################################################
+-->
 <odoo>
     <!-- History List view -->
     <record model="ir.ui.view" id="view_wiki_history_tree">
@@ -13,26 +22,6 @@
                 <field name="create_uid" />
                 <field name="create_date" />
             </list>
-        </field>
-    </record>
-
-    <!-- History Search view  -->
-    <record id="view_wiki_history_filter" model="ir.ui.view">
-        <field name="name">document.page.history.search</field>
-        <field name="model">document.page.history</field>
-        <field name="arch" type="xml">
-            <search string="Document Page History">
-                <field name="page_id" required="True" />
-                <field name="content" required="True" />
-                <field name="create_uid" />
-                <group expand="0" string="Group By...">
-                    <filter
-                        name="group_by_author"
-                        string="Author"
-                        context="{'group_by':'create_uid'}"
-                    />
-                </group>
-            </search>
         </field>
     </record>
 

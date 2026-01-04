@@ -1,5 +1,11 @@
-# Copyright 2024 Alberto Martínez <alberto.martinez@sygel.es>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# -*- coding: utf-8 -*-
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0) 
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+###############################################################################
 
 from odoo import models
 

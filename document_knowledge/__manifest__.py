@@ -1,16 +1,22 @@
-# Copyright (C) 2004-2009 Tiny SPRL (<http://tiny.be>).
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# -*- coding: utf-8 -*-
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0)
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+###############################################################################
+
+
 {
     "name": "Documents Knowledge",
-    "version": "18.0.1.0.2",
-    "author": "OpenERP SA,"
-    "MONK Software, "
-    "Tecnativa, "
-    "ForgeFlow, "
-    "Odoo Community Association (OCA)",
+    "version": "19.0.1.0.0",
     "category": "Knowledge",
-    "license": "AGPL-3",
-    "website": "https://github.com/OCA/knowledge",
+    "summary": "Provide centralized document permissions category.",
+    "description": "Base knowledge configuration with centralized document access group.",
+    "author": "Mastercore Sinapsys Global®",
+    "website": "https://www.mastercore.co",
+    "license": "OPL-1",
     "depends": ["base"],
     "data": [
         "data/ir_module_category.xml",

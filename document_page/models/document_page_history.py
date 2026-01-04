@@ -1,10 +1,15 @@
-# Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
+# -*- coding: utf-8 -*-
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0) 
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+###############################################################################
 
 from odoo import api, fields, models
 
-from odoo.addons.web_editor.models.diff_utils import (
+from odoo.addons.html_editor.models.diff_utils import (
     generate_comparison,
 )
 
@@ -54,4 +59,4 @@ class DocumentPageHistory(models.Model):
     @api.depends("page_id")
     def _compute_display_name(self):
         for rec in self:
-            rec.display_name = rec.id, "%s #%i" % (rec.page_id.name, rec.id)
+            rec.display_name = f"{rec.page_id.name} #{rec.id}"
