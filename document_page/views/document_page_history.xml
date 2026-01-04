@@ -25,26 +25,6 @@
         </field>
     </record>
 
-    <!-- History Search view  -->
-    <record id="view_wiki_history_filter" model="ir.ui.view">
-        <field name="name">document.page.history.search</field>
-        <field name="model">document.page.history</field>
-        <field name="arch" type="xml">
-            <search string="Document Page History">
-                <field name="page_id" required="True" />
-                <field name="content" required="True" />
-                <field name="create_uid" />
-                <group expand="0" string="Group By...">
-                    <filter
-                        name="group_by_author"
-                        string="Author"
-                        context="{'group_by':'create_uid'}"
-                    />
-                </group>
-            </search>
-        </field>
-    </record>
-
     <!-- History Form view  -->
     <record model="ir.ui.view" id="wiki_history_form">
         <field name="name">document.page.history.form</field>
