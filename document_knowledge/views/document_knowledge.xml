@@ -19,23 +19,15 @@
     <record id="ir_attachment_view_user_documents" model="ir.ui.view">
         <field name="name">Documents search view: additional filters</field>
         <field name="model">ir.attachment</field>
-        <field name="inherit_id" ref="base.view_attachment_search" />
+        <field name="inherit_id" ref="base.view_attachment_search"/>
         <field name="arch" type="xml">
             <search>
-                <field name="res_model" />
-                <field name="index_content" />
+                <field name="res_model"/>
                 <filter
                     name="user_documents"
-                    string="Documents"
-                    domain="[('res_model', 'not like', 'ir.%'), ('res_model', '!=', False)]"
+                    string="My documents"
+                    domain="[('create_uid', '=', uid)]"
                 />
-                <group string="Group by">
-                    <filter
-                        name="group_model"
-                        string="Model"
-                        context="{'group_by': 'res_model'}"
-                    />
-                </group>
             </search>
         </field>
     </record>
