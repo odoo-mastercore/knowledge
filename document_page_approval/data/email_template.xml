@@ -1,7 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0)
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+##############################################################################
+-->
 <odoo>
     <!-- If user wants to make upgrade-proof customizations to email templates, he should edit ir.model.data and check noupdate himself -->
-    <record id="email_template_new_draft_need_approval" model="mail.template">
         <field name="name">Automated new draft need approval Notification Mail</field>
         <field
             name="email_from"

@@ -1,13 +1,22 @@
-# Copyright (C) 2013 Savoir-faire Linux (<http://www.savoirfairelinux.com>).
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# -*- coding: utf-8 -*-
+##############################################################################
+# Author: Mastercore Sinapsys Global®
+# Copyright: 2019-Present.
+# License OPL-1 (Odoo Proprietary License v1.0)
+# See https://www.odoo.com/documentation/master/legal/licenses.html
+#
+###############################################################################
+
 
 {
     "name": "Document Page Approval",
-    "version": "18.0.1.1.0",
-    "author": "Savoir-faire Linux, Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/knowledge",
-    "license": "AGPL-3",
+    "version": "19.0.1.0.0",
+    "author": "Mastercore Sinapsys Global®",
+    "website": "https://www.mastercore.co",
+    "license": "OPL-1",
     "category": "Knowledge Management",
+    "summary": "Request and track approvals for document page changes.",
+    "description": "Adds approval workflow and notifications for document pages.",
     "depends": ["document_page", "mail"],
     "data": [
         "data/email_template.xml",
