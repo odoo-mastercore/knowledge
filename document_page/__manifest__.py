@@ -17,7 +17,7 @@
     "author": "Mastercore Sinapsys Global®",
     "website": "https://www.mastercore.co",
     "license": "OPL-1",
-    "depends": ["mail", "document_knowledge", "web_editor"],
+    "depends": ["mail", "document_knowledge", "html_editor"],
     "data": [
         "security/document_page_security.xml",
         "security/ir.model.access.csv",
