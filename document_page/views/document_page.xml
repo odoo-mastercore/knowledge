@@ -102,7 +102,7 @@
                                     <field name="draft_summary"
                                            placeholder="eg: Changed ... for ..."
                                            widget="text"
-                                           re
+                                           required="type == 'content'"/>
                                 </group>
                         </page>
                         <page name="history" string="History">
