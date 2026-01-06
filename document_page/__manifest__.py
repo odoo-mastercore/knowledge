@@ -10,7 +10,7 @@
 
 {
     "name": "Document Page",
-    "version": "19.0.1.0.2",
+    "version": "19.0.1.0.3",
     "category": "Knowledge Management",
     "summary": "Manage internal wiki-style document pages.",
     "description": "Knowledge base pages with history tracking and menu integration.",
