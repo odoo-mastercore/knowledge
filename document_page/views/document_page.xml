@@ -94,20 +94,16 @@
                                         invisible="not menu_id"
                                     />
                                 </group>
-                                <group string="Revision">
-                                    <field
-                                        name="draft_name"
-                                        placeholder="Rev 01"
-                                        required="True"
-                                    />
-                                    <field
-                                        name="draft_summary"
-                                        placeholder="eg: Changed ... for ..."
-                                        required="True"
-                                        widget="text"
-                                    />
+                                <group string="Revision" invisible="type != 'content'">
+                                    <field name="draft_name"
+                                           placeholder="Rev 01"
+                                           required="type == 'content'"/>
+                                    
+                                    <field name="draft_summary"
+                                           placeholder="eg: Changed ... for ..."
+                                           widget="text"
+                                           re
                                 </group>
-                            </group>
                         </page>
                         <page name="history" string="History">
                             <field name="history_ids">
