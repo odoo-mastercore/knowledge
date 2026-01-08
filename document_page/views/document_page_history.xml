@@ -68,6 +68,24 @@
         </field>
     </record>
 
+    <!-- History Search view  -->
+    <record id="view_wiki_history_filter" model="ir.ui.view">
+        <field name="name">document.page.history.search</field>
+        <field name="model">document.page.history</field>
+        <field name="arch" type="xml">
+            <search string="Document Page History">
+                <field name="page_id" required="True" />
+                <field name="content" required="True" />
+                <field name="create_uid" />
+                <filter
+                    name="group_by_author"
+                    string="Author"
+                    context="{'group_by':'create_uid'}"
+                />
+            </search>
+        </field>
+    </record>
+
     <!-- History Action  -->
     <record model="ir.actions.act_window" id="action_history">
         <field name="name">Page history</field>
