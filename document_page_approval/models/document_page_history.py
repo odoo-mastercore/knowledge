@@ -83,7 +83,7 @@ class DocumentPageHistory(models.Model):
                 rec.write({"state": "to approve"})
                 guids = [g.id for g in rec.page_id.approver_group_ids]
                 users = self.env["res.users"].search(
-                    [("groups_id", "in", guids), ("groups_id", "in", approver_gid.id)]
+                    [("group_ids", "in", guids), ("group_ids", "in", approver_gid.id)]
                 )
                 rec.message_subscribe(partner_ids=users.mapped("partner_id").ids)
                 rec.message_post_with_source(template)
